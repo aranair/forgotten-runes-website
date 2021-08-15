@@ -1944,6 +1944,16 @@
     tslib "^2.0.0"
     yargs-parser "20.0.0"
 
+"@openseadragon-imaging/openseadragon-imaginghelper@^2.2.2":
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/@openseadragon-imaging/openseadragon-imaginghelper/-/openseadragon-imaginghelper-2.2.2.tgz#d2fee5da51353f6605a28616b2b7ef9ae2f33e25"
+  integrity sha512-q5CCJOWXd8Fs+67ukHGkhWDP6G/HiRIZQmDCG3b3GaUNcPbc6zHY0AYpYCkcefVYkqBpOF+wGAalB0rCdgrrAw==
+
+"@openseadragon-imaging/openseadragon-viewerinputhook@^2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@openseadragon-imaging/openseadragon-viewerinputhook/-/openseadragon-viewerinputhook-2.2.1.tgz#bfe31026c82b0c08aef4f3092706972c6b3b01c2"
+  integrity sha512-ofAA065muVbEsCClUPw8uItk35PwQV6zx7yMcRdJrFBm5IBu9NjWm/RxPf6d/OdnGjger53BsMkKi6DlfNiGiw==
+
 "@opentelemetry/api@0.14.0":
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/@opentelemetry/api/-/api-0.14.0.tgz#4e17d8d2f1da72b19374efa7b6526aa001267cae"

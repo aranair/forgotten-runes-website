@@ -84,6 +84,8 @@ function App({ Component, pageProps }: { Component: any; pageProps: any }) {
           content={"Forgotten Runes Wizard's Cult: 10k on-chain Wizard NFTs"}
           key="ogdesc"
         />
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/openseadragon.min.js"></script>
+        <script type="text/javascript" src="/static/js/openseadragon-canvas-overlay.js"></script>
       </Head>
 
       <MobxProvider store={store}>

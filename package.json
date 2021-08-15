@@ -23,6 +23,8 @@
     "@mdx-js/loader": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "@next/mdx": "^11.0.1",
+    "@openseadragon-imaging/openseadragon-imaginghelper": "^2.2.2",
+    "@openseadragon-imaging/openseadragon-viewerinputhook": "^2.2.1",
     "@reach/dialog": "^0.12.1",
     "@react-hook/window-size": "^3.0.7",
     "@react-leaflet/core": "1.0.2",
