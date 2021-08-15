@@ -11,15 +11,6 @@ const CollageStyles = styled.div`
   }
 `;
 
-const wizardsList = () => {
-  const x = [...Array(200)].map((_, i) => ({
-    type: 'image',
-    url:  `https://nftz.forgottenrunes.com/wizards/alt/400-nobg/wizard-${i}.png`,
-  }));
-
-  return x;
-}
-
 const OpenSeaDragonViewer = () => {
   const [viewer, setViewer] = useState( null);
   useEffect(() => {
@@ -34,11 +25,8 @@ const OpenSeaDragonViewer = () => {
     setViewer(
       OpenSeaDragon({
         id: "wizards-collage",
-        tileSources: wizardsList(),
-        collectionMode: true,
-        collectionRows: 10,
-        collectionTileSize: 50,
-        collectionTileMargin: 5,
+        prefixUrl: "static/img/collage/",
+        tileSources: "/static/img/collage/wizards.dzi",
         showNavigationControl: false
       })
     );
