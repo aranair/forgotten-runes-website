@@ -1,6 +1,5 @@
 import Layout from "../../../components/Layout";
 import ReactMarkdown from "react-markdown";
-import { useState } from 'react';
 import gfm from "remark-gfm";
 import styled from "@emotion/styled";
 import Book from "../../../components/Lore/Book";
@@ -28,20 +27,15 @@ const WizardImageContainer = styled.div`
   }
 `;
 
-const InputContainer = styled.div<{ bg: string }>`
+const InputContainer = styled.div`
   margin-right: -150px;
   .textInput {
     font-family: 'Alagard';
     background-color: inherit;
     color: white;
     border: none;
-    font-size: 1em;
-    font-family: 'Alagard';
     resize: none;
-  }
-
-  @media (min-width: 768px) {
-    font-size: 1.8em;
+    font-size: 1.6em;
   }
 `;
 
@@ -51,17 +45,11 @@ const TextGeneratorPage = () => {
   const wizardData: any = wizData[wizardId.toString()];
   const bg = "#" + wizardData.background_color;
 
-  const [text, setText] = useState('Hello darkness, my old friend.');
-
-  const onChange = e => {
-    setText(e.target.value); // Remove this line will lead to normal denounce
-  };
-
   return (
     <Layout title="wtf | Forgotten Runes Wizard's Cult: 10,000 on-chain Wizard NFTs">
       <Wrapper bg={bg}>
         <InputContainer>
-          <textarea className="textInput" cols="25" rows="10" value={text} onChange={onChange} />
+          <textarea className="textInput" cols="25" rows="10" value={'Hello darkness, my old friend.'} />
         </InputContainer>
         <WizardImageContainer>
           <ResponsivePixelImg
