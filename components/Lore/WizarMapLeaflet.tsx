@@ -3,6 +3,7 @@ import { MapContainer, useMap } from "react-leaflet";
 import styled from "@emotion/styled";
 import "leaflet/dist/leaflet.css";
 import L, { CRS } from "leaflet";
+import "../../lib/smoothWheelZoom";
 import productionWizardData from "../../data/nfts-prod.json";
 import { renderToString } from "react-dom/server";
 import { useRouter } from "next/router";
