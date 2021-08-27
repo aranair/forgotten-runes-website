@@ -188,7 +188,9 @@ const WizardMapLeaflet = () => {
           crs={CRS.Simple}
           zoom={5}
           center={[-78.125, 78.125]}
-          scrollWheelZoom={true}
+          scrollWheelZoom={false}
+          smoothWheelZoom={true}
+          smoothSensitivity={1}
           style={{ height: "100%", width: "100%" }}
           attributionControl={false}
           zoomSnap={0.25}

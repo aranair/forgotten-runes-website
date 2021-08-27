@@ -84,7 +84,8 @@ function App({ Component, pageProps }: { Component: any; pageProps: any }) {
           property="og:description"
           content={"Forgotten Runes Wizard's Cult: 10k on-chain Wizard NFTs"}
           key="ogdesc"
-        />
+         />
+        <script type="text/javascript" src="/static/script/smothwheelzoom.js"></script>
       </Head>
 
       <MobxStateTreeProvider value={store}>
