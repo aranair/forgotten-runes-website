@@ -181,7 +181,6 @@ const Layers = ({ wizardLore }: { wizardLore: any }) => {
   );
 };
 
-const WizardMapLeaflet = () => {
 const WizardMapLeaflet = ({ wizardLore }: { wizardLore: object }) => {
   return (
     <MapWrapper>
