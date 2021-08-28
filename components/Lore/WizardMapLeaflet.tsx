@@ -193,7 +193,7 @@ const WizardMapLeaflet = ({ wizardLore }: { wizardLore: object }) => {
           center={[-78.125, 78.125]}
           scrollWheelZoom={false}
           smoothWheelZoom={true}
-          smoothSensitivity={1}
+          smoothSensitivity={1.5}
           style={{ height: "100%", width: "100%" }}
           attributionControl={false}
           zoomSnap={0.25}
