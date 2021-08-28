@@ -56,7 +56,7 @@ const MapStyles = styled.div`
 const WizardPopup = ({
   name,
   index,
-  hasLore,
+  hasLore
 }: {
   name: string;
   index: number;
@@ -74,7 +74,7 @@ const WizardPopup = ({
   );
 };
 
-const Layers = () => {
+const Layers = ({ wizardLore }: { wizardLore: any }) => {
   const map = useMap();
   const router = useRouter();
   const { id } = router.query;
@@ -88,7 +88,7 @@ const Layers = () => {
         noWrap: true,
         errorTileUrl: "https://nftz.forgottenrunes.com/tiles/wizards/blank.png",
         maxZoom: 8,
-        minZoom: 3,
+        minZoom: 3
       }
     ).addTo(map);
 
@@ -103,17 +103,18 @@ const Layers = () => {
 
       const background = L.rectangle([
         [point1.lat, point1.lng],
-        [point2.lat, point2.lng],
+        [point2.lat, point2.lng]
       ]);
 
       const featureGeoJson = background.toGeoJSON();
 
-      const hasLore = true; // TODO:
+      const hasLore = wizardLore[i]; // TODO:
 
       featureGeoJson.properties.style = {
-        color: hasLore ? `#${wizData[i].background_color}` : "grey",
+        // color: hasLore ? `#${wizData[i].background_color}` : "grey",
+        color: `#${wizData[i].background_color}`,
         stroke: false,
-        fillOpacity: 1,
+        fillOpacity: 1
       };
 
       featureGeoJson.properties.wizardData = wizData[i];
@@ -126,7 +127,7 @@ const Layers = () => {
     const geoJson: GeoJsonObject = {
       type: "FeatureCollection",
       // @ts-ignore
-      features: backgrounds,
+      features: backgrounds
     };
 
     map.createPane("underlays");
@@ -154,7 +155,7 @@ const Layers = () => {
       },
       style: function (feature) {
         return feature?.properties.style;
-      },
+      }
     }).addTo(map);
   }, [map]);
 
@@ -169,7 +170,7 @@ const Layers = () => {
 
     map.fitBounds([
       [point1.lat, point1.lng],
-      [point2.lat, point2.lng],
+      [point2.lat, point2.lng]
     ]);
   }, [map, id]);
 
@@ -181,6 +182,7 @@ const Layers = () => {
 };
 
 const WizardMapLeaflet = () => {
+const WizardMapLeaflet = ({ wizardLore }: { wizardLore: object }) => {
   return (
     <MapWrapper>
       <MapStyles>
@@ -196,7 +198,7 @@ const WizardMapLeaflet = () => {
           attributionControl={false}
           zoomSnap={0.25}
         >
-          <Layers />
+          <Layers wizardLore={wizardLore} />
         </MapContainer>
       </MapStyles>
     </MapWrapper>
